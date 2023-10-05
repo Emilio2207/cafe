@@ -139,7 +139,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(../public/images/background.jpg);
+    background: url(/public/images/background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -162,7 +162,7 @@ section{
 .nosotros{
     padding-top:50px;
     padding-bottom: 50px;
-    background-image: url(../public/images/about-bg.png);
+    background-image: url(/public/images/about-bg.png);
     background-repeat: repeat-y;
     background-position: center top;
 }
@@ -214,6 +214,10 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
+}
+
+.header .navbar a.active {
+    color: var(--primary-color);
 }
 
 .menu .box-container .box{
@@ -498,4 +502,8 @@ section{
         font-size: 50%;
     }
 
+}
+
+.activo{
+    color: red;
 }
