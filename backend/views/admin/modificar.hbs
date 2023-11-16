@@ -1,0 +1,71 @@
+<section class="contacto" id="contacto">
+
+  <h1 class="heading">Modificando!</h1>
+
+  <div class="row">
+
+    <form
+      action="/admin/novedades/modificar"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <h3>Modificar la novedad</h3>
+      <input type="hidden" placeholder="Id" name="id" value="{{novedad.id}}" />
+
+      <div class="inputBox">
+        <span class="fas fa-pen"></span>
+        <input
+          type="text"
+          placeholder="Titulo"
+          name="titulo"
+          value="{{novedad.titulo}}"
+        />
+      </div>
+
+      <div class="inputBox">
+        <span class="fas fa-pen"></span>
+        <input
+          type="text"
+          placeholder="Subtitulo"
+          name="subtitulo"
+          value="{{novedad.subtitulo}}"
+        />
+      </div>
+
+      <div class="inputBox">
+        <span class="fas fa-images"></span>
+        <input type="file" placeholder="Imagen" name="imagen" id="imagen" />
+      </div>
+
+      <div class="inputBox">
+        <span class="fas fa-exclamation"></span>
+        <h4
+          for="img_delete"
+          style="color: white; display: block; margin: 30;"
+        >Eliminar&nbsp;imagen&nbsp;actual?</h4>
+        <input
+          type="checkbox"
+          name="img_delete"
+          id="img_delete"
+          value="1"
+          style="display: block;"
+        />
+        <input type="hidden" name="img_original" value="{{novedad.img_id}}" />
+      </div>
+
+      <div class="inputBox">
+        <span class="fas fa-pen"></span>
+        <textarea
+          name="cuerpo"
+          placeholder="Cuerpo"
+        >{{novedad.cuerpo}}</textarea>
+      </div>
+
+      <input type="submit" value="Modificar" class="btn" />
+
+    </form>
+    {{#if error}}
+      <h5>{{message}}</h5>
+    {{/if}}
+  </div>
+</section>

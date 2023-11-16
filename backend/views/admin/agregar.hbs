@@ -1,0 +1,42 @@
+<section class="contacto" id="contacto">
+
+  <h1 class="heading">Agregando!</h1>
+
+  <div class="row">
+
+    <form
+      action="/admin/novedades/agregar"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <h3>Agregar una nueva novedad</h3>
+
+      <div class="inputBox">
+        <span class="fas fa-pen"></span>
+        <input type="text" placeholder="Titulo" name="titulo" />
+      </div>
+
+      <div class="inputBox">
+        <span class="fas fa-pen"></span>
+        <input type="text" placeholder="Subtitulo" name="subtitulo" />
+      </div>
+
+      <div class="inputBox">
+        <span class="fas fa-images"></span>
+        <input type="file" placeholder="Imagen" name="imagen" id="imagen" />
+      </div>
+
+      <div class="inputBox">
+        <span class="fas fa-pen"></span>
+        {{! <input type="text" placeholder="Cuerpo" /> no va el input}}
+        <textarea name="cuerpo" placeholder="Cuerpo"></textarea>
+      </div>
+
+      <input type="submit" value="guardar" class="btn" />
+
+    </form>
+    {{#if error}}
+      <h5>{{message}}</h5>
+    {{/if}}
+  </div>
+</section>
